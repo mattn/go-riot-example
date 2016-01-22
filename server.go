@@ -25,7 +25,7 @@ func (todo *Todo) BeforeInsert() error {
 }
 
 func main() {
-	db, err := genmai.New(&genmai.SQLite3Dialect{}, "./foo.db")
+	db, err := genmai.New(&genmai.SQLite3Dialect{}, "./todo.db")
 	if err != nil {
 		log.Fatal(err)
 	}
