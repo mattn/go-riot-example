@@ -31,8 +31,8 @@
         .post("/api")
         .type('form')
         .send({title: item.text})
-        .end(function() {
-          item.items.push({ title: item.text })
+        .end(function(err, data) {
+          item.items.push(data.body)
           item.text = item.input.value = ''
           item.update();
         });
