@@ -14,7 +14,7 @@ tasks:
 - match: './assets/*.tag'
   commands:
   - :livereload /
-- match: 'app.js'
+- match: 'server.go'
   commands:
   - :restart
   - :livereload /
